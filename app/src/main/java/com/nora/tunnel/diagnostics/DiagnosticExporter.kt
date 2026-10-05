@@ -1,0 +1,2 @@
+package com.nora.tunnel.diagnostics import android.os.Build fun generateReport(vpnState: String, protocol: String, core: String, transport: String) = """ Nora Tunnel Diagnostics ----------------------- App version: 1.0.0 Android: ${Build.VERSION.RELEASE} (API ${Build.VERSION.SDK_INT}) Arch: ${Build.SUPPORTED_ABIS.joinToString()} VPN state: $vpnState Protocol: $protocol Core: $core Transport: $transport Connection state: $vpnState Recent errors: <redacted> DNS state: System DNS Network type: WIFI """.trimIndent() // NEVER include: Passwords, Private keys, Tokens, Full config
+
