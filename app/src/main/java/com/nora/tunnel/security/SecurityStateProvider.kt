@@ -1,0 +1,1 @@
+package com.nora.tunnel.security import android.net.ConnectivityManager data class SecurityState(val vpnActive: Boolean, val encryption: String, val dns: String, val ipv6: String, val killSwitch: Boolean) fun getSecurityState(cm: ConnectivityManager, vpnActive: Boolean) = SecurityState(vpnActive, if(vpnActive) "ACTIVE" else "UNKNOWN", "NOT CONFIGURED", "DISABLED", false)
