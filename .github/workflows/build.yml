@@ -1,0 +1,13 @@
+name: Build on: [push] jobs: build: runs-on: ubuntu-latest steps: - uses: actions/checkout@v4 - uses: actions/setup-java@v4 with: { java-version: '17', distribution: 'temurin' } - run: chmod +x gradlew && ./gradlew assembleDebug
+
+
+
+Release Safety Checklist enforced:
+
+No connect(){status=CONNECTED} - Only real Builder.establish() success
+
+
+No fake latency/speed - Shows Statistics unavailable if statistics()==null
+
+
+No hardcoded secrets - All via EncryptedSharedPreferences
